@@ -1,6 +1,6 @@
 package Inheritance;
-import java.util.Scanner;
-public class S3 {
+class Animal
+{
 	void eat()
 	{
 		System.out.println("Animal is Eating");
@@ -9,17 +9,22 @@ public class S3 {
 	{
 		System.out.println("Animal is Sleeping");
 	}
-	class Bird extends S3
+}
+class Bird extends Animal
+{
+	void fly()
 	{
-		void fly()
-		{
 			System.out.println("Bird is flying");
-		}
 	}
+}
+public class S3 
+{
 public static void main(String args[])
 {
-	S3 nx=new S3();
+	Animal nx=new Animal();
 	nx.eat();
 	nx.sleep();
-	}
+	Bird b=new Bird();
+	b.fly();
+}
 }
